@@ -47,8 +47,7 @@ filtering anywhere.
   - [bash enforcement](#bash-enforcement-no-command-parsing-ever)
   - [Search isolation (fd & rg)](#search-isolation-fd--rg)
   - [File tool enforcement](#file-tool-enforcement)
-  - [Self-protection](#self-protection)
-- [Security model — read this](#security-model--read-this)
+  - [Self-protection](#self-protection)- [Security model — read this](#security-model--read-this)
 - [Known limitations](#known-limitations)
 - [Troubleshooting](#troubleshooting)
 - [Development](#development)
@@ -198,7 +197,8 @@ Layers (`policy.ts`, `paths.ts`, `state.ts`, `bwrap.ts`, `sandbox-process.ts`,
 `commands.ts`, `search/*`) are kept strictly separate: policy logic, mount
 compilation, process execution, tool adapters and Pi integration never mix.
 `enforce.ts` holds the shared file-tool decision logic used by both the Pi
-hook and the tests.
+hook and the tests. Maintainers: the design rationale behind this layout is
+in [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
 
 ### bash enforcement (no command parsing, ever)
 
