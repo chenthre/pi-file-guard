@@ -1,7 +1,6 @@
 # Pi File Guard
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
-[![CI](https://github.com/pi-file-guard/pi-file-guard/actions/workflows/ci.yml/badge.svg)](https://github.com/pi-file-guard/pi-file-guard/actions/workflows/ci.yml)
 [![npm](https://img.shields.io/npm/v/pi-file-guard?color=cb3837&label=npm)](https://www.npmjs.com/package/pi-file-guard)
 [![Node](https://img.shields.io/badge/node-%3E%3D18-339933)](https://nodejs.org)
 [![Pi](https://img.shields.io/badge/pi-0.85%2B-8b5cf6)](https://github.com/earendil-works/pi-mono)
