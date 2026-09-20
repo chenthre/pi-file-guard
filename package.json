@@ -1,0 +1,66 @@
+{
+	"name": "pi-file-guard",
+	"version": "1.0.0",
+	"description": "User-controlled DENY/READ/WRITE filesystem policy for the Pi coding agent (Linux + bubblewrap). /hide secrets, /lock production files \u2014 enforced on file tools and every bash/fd/rg subprocess through one shared bwrap filesystem view.",
+	"license": "MIT",
+	"author": "Pi File Guard contributors",
+	"type": "module",
+	"keywords": [
+		"pi-package",
+		"pi",
+		"coding-agent",
+		"extension",
+		"security",
+		"sandbox",
+		"filesystem",
+		"bubblewrap",
+		"deny",
+		"lock",
+		"privacy"
+	],
+	"engines": {
+		"node": ">=18"
+	},
+	"files": [
+		"index.ts",
+		"policy.ts",
+		"paths.ts",
+		"state.ts",
+		"enforce.ts",
+		"commands.ts",
+		"bwrap.ts",
+		"sandbox-process.ts",
+		"search",
+		"README.md",
+		"LICENSE",
+		"CHANGELOG.md"
+	],
+	"scripts": {
+		"check": "biome check .",
+		"check:write": "biome check --write .",
+		"format": "biome format --write .",
+		"typecheck": "tsc --noEmit",
+		"test": "tsx --test tests/policy.test.ts tests/paths.test.ts tests/state.test.ts tests/bwrap.test.ts tests/find.test.ts tests/grep.test.ts tests/search-security.test.ts tests/search-performance.test.ts tests/integration.test.ts",
+		"verify": "npm run check && npm run typecheck && npm test",
+		"prepack": "npm run check && npm run typecheck && npm test"
+	},
+	"peerDependencies": {
+		"@earendil-works/pi-coding-agent": "*",
+		"typebox": "*"
+	},
+	"devDependencies": {
+		"@types/node": "^24.0.0",
+		"tsx": "^4.19.0",
+		"typescript": "^5.6.0",
+		"@biomejs/biome": "^2.3.5"
+	},
+	"publishConfig": {
+		"access": "public",
+		"tag": "latest"
+	},
+	"pi": {
+		"extensions": [
+			"./index.ts"
+		]
+	}
+}

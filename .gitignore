@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Logs
+*.log
+npm-debug.log*
+pi-debug.log
+
+# Editor / OS
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# Test artifacts
+coverage/
+.nyc_output/
+
+# Local pi state (never commit guard state or masks)
+.pierre-agent/
+.tmp/
+# Internal planning documents (not part of the public package)
+guide.md
+guide_v2.md
