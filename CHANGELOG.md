@@ -33,5 +33,5 @@ Initial public release. The v2 search architecture is included from day one.
 - DENY does not guarantee pathname secrecy; hard-link aliases are not auto-discovered.
 - Requires Linux + Bubblewrap; filesystem outside the workspace is read-only for agent processes (`/tmp` is a writable tmpfs scratch).
 
-[Unreleased]: https://github.com/pi-file-guard/pi-file-guard/compare/v1.0.0...HEAD
-[1.0.0]: https://github.com/pi-file-guard/pi-file-guard/releases/tag/v1.0.0
+[Unreleased]: https://github.com/chenthre/pi-file-guard/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/chenthre/pi-file-guard/releases/tag/v1.0.0

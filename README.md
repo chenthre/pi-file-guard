@@ -102,7 +102,7 @@ DENY-free trees. File-tool policy enforcement keeps working in all cases.
 ### As a pi package (recommended)
 
 ```bash
-pi install git:github.com/pi-file-guard/pi-file-guard@v1.0.0
+pi install git:github.com/chenthre/pi-file-guard@v1.0.0
 ```
 
 or from npm once published:
