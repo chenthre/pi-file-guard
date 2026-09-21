@@ -1,7 +1,6 @@
 # Pi File Guard
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
-[![npm](https://img.shields.io/npm/v/pi-file-guard?color=cb3837&label=npm)](https://www.npmjs.com/package/pi-file-guard)
 [![Node](https://img.shields.io/badge/node-%3E%3D18-339933)](https://nodejs.org)
 [![Pi](https://img.shields.io/badge/pi-0.85%2B-8b5cf6)](https://github.com/earendil-works/pi-mono)
 
@@ -99,16 +98,10 @@ DENY-free trees. File-tool policy enforcement keeps working in all cases.
 
 ## Installation
 
-### As a pi package (recommended)
+### As a pi package
 
 ```bash
 pi install git:github.com/chenthre/pi-file-guard@v1.0.0
-```
-
-or from npm once published:
-
-```bash
-pi install npm:pi-file-guard
 ```
 
 ### As a plain extension
