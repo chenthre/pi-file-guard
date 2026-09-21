@@ -34,10 +34,37 @@ filtering anywhere.
 > ⚠️ Read the [Security model](#security-model--read-this) — this is a file
 > policy, not a full sandbox for the Pi process itself.
 
+> [!WARNING]
+> **AI-developed software — use with care.** This extension was written by an
+> AI coding agent and has **not** had an independent human security review. It
+> is security-adjacent code running with your full user privileges: read the
+> [security model](#security-model--read-this), the
+> [architecture notes](docs/ARCHITECTURE.md) and the test suite before
+> trusting it with anything you value. Use at your own risk.
+
+---
+
+## Why Pi File Guard?
+
+Pi does not sandbox the agent by default: built-in tools and extensions run
+with your full user permissions, so the agent can read anything you can read
+and write anywhere you can write. Usually that is convenient — until it is
+not:
+
+- the agent may **read** a file you would rather it not see (secrets, private
+  notes, drafts) and silently pollute its context with that content;
+- the agent may **write** into files you maintain by hand, or overwrite
+  something it never should have touched — “AI slop” you did not ask for.
+
+Pi File Guard is a **minimal** sandbox for exactly this gap: it lets you
+**lock** or **hide** specific files and directories in your working directory
+without running Pi inside a container or VM.
+
 ---
 
 ## Table of contents
 
+- [Why Pi File Guard?](#why-pi-file-guard)
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Quick start](#quick-start)
@@ -47,7 +74,8 @@ filtering anywhere.
   - [bash enforcement](#bash-enforcement-no-command-parsing-ever)
   - [Search isolation (fd & rg)](#search-isolation-fd--rg)
   - [File tool enforcement](#file-tool-enforcement)
-  - [Self-protection](#self-protection)- [Security model — read this](#security-model--read-this)
+  - [Self-protection](#self-protection)
+- [Security model — read this](#security-model--read-this)
 - [Known limitations](#known-limitations)
 - [Troubleshooting](#troubleshooting)
 - [Development](#development)
